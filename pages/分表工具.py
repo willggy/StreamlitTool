@@ -12,6 +12,10 @@ st.set_page_config(page_title="分表工具", layout="wide")
 
 st.markdown("""
     <style>
+    /* 隐藏右上角的菜单按钮和 GitHub 部署者信息 */
+    #MainMenu {visibility: hidden;}
+    header {visibility: hidden;}
+    footer {visibility: hidden;}
     .block-container { max-width: 900px !important; margin: 0 auto !important; padding-top: 2rem !important; }
     .stApp { background-color: #ffffff; } 
     label[data-testid="stWidgetLabel"] { display: none !important; }
@@ -205,4 +209,5 @@ if sheet_data:
                 st.rerun()
 
         if st.session_state.res:
+
             r4c2.download_button(label="💾 下载分表结果", data=st.session_state.res["data"], file_name=st.session_state.res["name"], use_container_width=True)
