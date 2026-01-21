@@ -13,7 +13,7 @@ st.set_page_config(page_title="智能分表工具", layout="wide")
 st.markdown("""
     <style>
     .block-container { max-width: 900px !important; margin: 0 auto !important; padding-top: 1.5rem !important; }
-    .stApp { background-color: #f4f1ea; } 
+    .stApp { background-color: #ffffff; } 
     label[data-testid="stWidgetLabel"] { display: none !important; }
 
     /* 统一组件高度与底色 */
@@ -197,4 +197,5 @@ if sheet_data:
             st.rerun()
 
     if st.session_state.res:
+
         r4c2.download_button(label="💾 下载结果", data=st.session_state.res["data"], file_name=st.session_state.res["name"], use_container_width=True)
