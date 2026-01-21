@@ -5,6 +5,10 @@ st.set_page_config(page_title="AI 工具箱", layout="wide")
 # 复用你之前的精美 CSS
 st.markdown("""
 <style>
+/* 隐藏右上角的菜单按钮和 GitHub 部署者信息 */
+    #MainMenu {visibility: hidden;}
+    header {visibility: hidden;}
+    footer {visibility: hidden;}
     [data-testid="stHeader"], footer { visibility: hidden !important; }
     .page-title { text-align: center; margin-bottom: 30px; }
     .card-grid {
@@ -60,4 +64,5 @@ st.markdown("""
 </div>
 
 </div>
+
 """, unsafe_allow_html=True)
